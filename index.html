@@ -7,13 +7,13 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<title>قصة الحلى — Sweet Story | معمول وبسبوسة · من الدقيق تبدأ الحكاية</title>
-<meta name="description" content="قصة الحلى — Sweet Story. معمول وبسبوسة تُحضّر بعناية، بطعمٍ يستحق أن يبقى في الذاكرة. من الدقيق تبدأ الحكاية.">
+<title>قصة الحلى | معمول وبسبوسة · من الدقيق تبدأ الحكاية</title>
+<meta name="description" content="قصة الحلى. معمول وبسبوسة تُحضّر بعناية، بطعمٍ يستحق أن يبقى في الذاكرة. من الدقيق تبدأ الحكاية.">
 <link rel="icon" type="image/png" href="images/app-icon.png">
 <link rel="apple-touch-icon" href="images/app-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="قصة الحلى">
-<meta property="og:title" content="قصة الحلى — Sweet Story">
+<meta property="og:title" content="قصة الحلى">
 <meta property="og:description" content="معمول وبسبوسة تُحضّر بعناية، بطعمٍ يستحق أن يبقى في الذاكرة.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/hero-real.jpg">
@@ -36,8 +36,8 @@
   src: url('assets/fonts/IBMPlexSansArabic-Regular.ttf') format('truetype');
 }
 /* ============================================================
-   قصة الحلى — Sweet Story · Digital QR Menu
-   Multi-page menu experience. Flour palette. 8px system.
+   قصة الحلى · قائمة QR رقمية متعددة الصفحات
+   لوحة ألوان الدقيق · نظام 8px
    ============================================================ */
 :root{
   --flour-white:#F5F1E8;
@@ -99,6 +99,14 @@ button{font-family:inherit}
   letter-spacing:.34em;text-transform:uppercase;color:var(--warm-wheat);
   direction:ltr;unicode-bidi:isolate;
 }
+.ar-label{
+  font-family:var(--serif-ar);font-size:14px;font-weight:700;
+  color:var(--warm-wheat);
+}
+.hero-eyebrow .ar-label{color:rgba(227,216,198,.85)}
+.story-text .ar-label{color:rgba(227,216,198,.7);display:block;margin-bottom:var(--s3)}
+.b-info .b-kicker .ar-label{font-size:12.5px}
+.footer-bottom .ar-label{font-size:12px}
 .sec-title{font-family:var(--serif-ar);font-weight:700;font-size:clamp(30px,3.6vw,44px);line-height:1.5;color:var(--deep-dough)}
 .sec-sub{font-size:15.5px;font-weight:300;color:var(--toasted);max-width:560px;line-height:2}
 .ghost-num{
@@ -225,7 +233,7 @@ button{font-family:inherit}
 .cat-switch button:hover{color:var(--toasted)}
 .cat-switch button.active{color:var(--deep-dough)}
 .cat-switch button.active::after{transform:scaleX(1)}
-.cat-switch .count{margin-inline-start:auto;font-family:var(--serif-en);font-size:12px;letter-spacing:.2em;color:var(--wheat-beige);direction:ltr}
+.cat-switch .count{margin-inline-start:auto;font-family:var(--sans-ar);font-size:12.5px;color:var(--wheat-beige)}
 
 .p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4) var(--s3)}
 .p-card{transition:opacity .3s ease,transform .3s ease}
@@ -311,7 +319,7 @@ button{font-family:inherit}
 .sig-grid{display:grid;grid-template-columns:1.25fr 1fr;min-height:560px}
 .sig-photo{position:relative;overflow:hidden}
 .sig-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.sig-photo figcaption{position:absolute;bottom:var(--s3);inset-inline-start:var(--s3);font-family:var(--serif-en);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(245,241,232,.85);direction:ltr}
+.sig-photo figcaption{position:absolute;bottom:var(--s3);inset-inline-start:var(--s3);font-family:var(--serif-ar);font-size:13px;color:rgba(245,241,232,.9)}
 .sig-text{display:flex;flex-direction:column;justify-content:center;padding:var(--s10)}
 .sig-text .latin-label{margin-bottom:var(--s3)}
 .sig-text h2{font-family:var(--serif-ar);font-weight:700;font-size:clamp(30px,3.4vw,42px);line-height:1.7;color:var(--deep-dough)}
@@ -615,10 +623,9 @@ body.locked{overflow:hidden}
 <div id="splash">
   <div class="sp-dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="splash-inner">
-    <img class="sp-logo" src="images/logo-light.png" alt="قصة الحلى — Sweet Story">
+    <img class="sp-logo" src="images/logo-light.png" alt="قصة الحلى">
     <div class="sp-orn" aria-hidden="true"><b></b></div>
     <p class="sp-tag">من الدقيق تبدأ الحكاية</p>
-    <span class="sp-latin">Sweet Story</span>
     <div class="sp-cta">
       <button class="sp-btn" id="spMaamoul" type="button" aria-label="فتفت المعمول لتتصفح المنيو">
         <svg class="sp-cookie" viewBox="0 0 120 120" aria-hidden="true">
@@ -667,9 +674,9 @@ body.locked{overflow:hidden}
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#home" class="brand" data-nav="home" aria-label="قصة الحلى — Sweet Story">
-      <img class="logo logo-light" src="images/logo-light.png" alt="قصة الحلى — Sweet Story">
-      <img class="logo logo-dark" src="images/logo.png" alt="قصة الحلى — Sweet Story">
+    <a href="#home" class="brand" data-nav="home" aria-label="قصة الحلى">
+      <img class="logo logo-light" src="images/logo-light.png" alt="قصة الحلى">
+      <img class="logo logo-dark" src="images/logo.png" alt="قصة الحلى">
     </a>
     <nav class="nav-links" aria-label="التنقل الرئيسي">
       <a href="#home" data-nav="home">الرئيسية</a>
@@ -684,7 +691,7 @@ body.locked{overflow:hidden}
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="close-menu" id="closeMenu" aria-label="إغلاق القائمة">×</button>
-  <img class="mm-logo" src="images/logo.png" alt="قصة الحلى — Sweet Story">
+  <img class="mm-logo" src="images/logo.png" alt="قصة الحلى">
   <a href="#home" data-nav="home">الرئيسية</a>
   <a href="#maamoul" data-nav="maamoul">المعمول</a>
   <a href="#basbousa" data-nav="basbousa">البسبوسة والمعجنات</a>
@@ -699,7 +706,7 @@ body.locked{overflow:hidden}
     <div class="hero-shade"></div>
     <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="wrap hero-content">
-      <div class="hero-eyebrow reveal"><span class="latin-label">Sweet Story · Traditional Arabic Bakery</span></div>
+      <div class="hero-eyebrow reveal"><span class="ar-label">مخبز عربي تقليدي</span></div>
       <h1 class="reveal">من الدقيق تبدأ الحكاية</h1>
       <p class="hero-sub reveal">معمول وبسبوسة تُحضّر بعناية، بطعمٍ يستحق أن يبقى في الذاكرة.</p>
       <div class="hero-actions reveal">
@@ -730,7 +737,6 @@ body.locked{overflow:hidden}
         <img src="images/maamoul-02-qashta.jpg" alt="المعمول" loading="lazy" decoding="async">
         <div class="cc-shade"></div>
         <div class="cc-text">
-          <span class="cc-latin">Maamoul Collection — 01</span>
           <span class="cc-name">معمولنا</span>
           <span class="cc-cta">عرض الأصناف والأسعار</span>
         </div>
@@ -739,7 +745,6 @@ body.locked{overflow:hidden}
         <img src="images/basbousa-02-qashta.jpg" alt="البسبوسة والمعجنات" loading="lazy" decoding="async">
         <div class="cc-shade"></div>
         <div class="cc-text">
-          <span class="cc-latin">Basbousa &amp; Pastries — 02</span>
           <span class="cc-name">البسبوسة والمعجنات</span>
           <span class="cc-cta">عرض الأصناف والأسعار</span>
         </div>
@@ -753,7 +758,6 @@ body.locked{overflow:hidden}
   <div class="wrap page-head">
     <div class="sec-head reveal" style="position:relative">
       <span class="ghost-num" aria-hidden="true">٠١</span>
-      <span class="latin-label">MAAMOUL COLLECTION — 01</span>
       <h2 class="sec-title">معمولنا</h2>
       <p class="sec-sub">قطع تُحضّر بعناية، وتفاصيل تبدأ من العجين.</p>
     </div>
@@ -762,7 +766,7 @@ body.locked{overflow:hidden}
       <button class="active" data-show="all" role="tab" aria-selected="true">كل المعمول</button>
       <button data-show="classic" role="tab" aria-selected="false">المعمول</button>
       <button data-show="mrabaat" role="tab" aria-selected="false">المربعات</button>
-      <span class="count">08 PIECES</span>
+      <span class="count">٠٨ قطع</span>
     </div>
 
     <div class="p-grid" id="maamoulGrid">
@@ -819,7 +823,6 @@ body.locked{overflow:hidden}
 <section class="page basbousa-page" id="page-basbousa">
   <div class="chapter" aria-label="بداية فصل البسبوسة">
     <div class="wrap chapter-inner">
-      <span class="ch-label">Chapter Two — Semolina</span>
       <h3>ثم يأتي السميد… ليبدأ فصلٌ آخر من الحكاية.</h3>
       <div class="ch-orn"><i></i><b></b><i></i></div>
     </div>
@@ -827,8 +830,7 @@ body.locked{overflow:hidden}
 
   <div class="wrap">
     <div class="sec-head reveal" style="position:relative">
-      <span class="ghost-num" aria-hidden="true">02</span>
-      <span class="latin-label">BASBOUSA &amp; PASTRIES — 02</span>
+      <span class="ghost-num" aria-hidden="true">٠٢</span>
       <h2 class="sec-title">البسبوسة والمعجنات</h2>
       <p class="sec-sub">قوام غني، تفاصيل ناعمة، ومعجنات محشوّة تُخبز حتى الذهبية.</p>
     </div>
@@ -836,7 +838,6 @@ body.locked{overflow:hidden}
     <div class="b-row reveal">
       <figure class="b-photo"><img src="images/basbousa-plate.jpg" alt="بسبوسة الحليب المحموس على طبق" loading="lazy" decoding="async"><span class="p-num">01</span></figure>
       <div class="b-info">
-        <div class="b-kicker"><span class="latin-label">Basbousa No. 01</span></div>
         <h3>بسبوسة الحليب المحموس</h3>
         <p class="b-desc">قوامٌ ذهبي مشرّب بالقطر، بعمق الحليب المحموس الذي يمنحها طابعها الخاص.</p>
         <div class="b-price"><b>40 ر.س</b></div>
@@ -846,7 +847,6 @@ body.locked{overflow:hidden}
     <div class="b-row flip reveal">
       <figure class="b-photo"><img src="images/basbousa-02-qashta.jpg" alt="بسبوسة بالقشطة" loading="lazy" decoding="async"><span class="p-num">02</span></figure>
       <div class="b-info">
-        <div class="b-kicker"><span class="latin-label">Basbousa No. 02</span></div>
         <h3>بسبوسة بالقشطة</h3>
         <p class="b-desc">طبقة قشطة ناعمة فوق سميدٍ طري، لقاءٌ بسيط بين القوامين.</p>
         <div class="b-price"><b>40 ر.س</b></div>
@@ -856,7 +856,7 @@ body.locked{overflow:hidden}
     <div class="b-row reveal">
       <figure class="b-photo"><img src="images/basbousa-beehive.jpg" alt="خلية النحل — طازجة وذهبية" loading="lazy" decoding="async" style="object-position:center center"><span class="p-num">03</span></figure>
       <div class="b-info">
-        <div class="b-kicker"><span class="latin-label" style="font-family:var(--serif-ar);letter-spacing:normal;text-transform:none;direction:rtl">خلية النحل</span></div>
+        <div class="b-kicker"><span class="ar-label">خلية النحل</span></div>
         <h3>خلية النحل</h3>
         <p class="b-desc">خلية نحل محشوة بالجبن الكيري</p>
         <div class="b-price"><b>25 ر.س</b></div>
@@ -866,7 +866,6 @@ body.locked{overflow:hidden}
     <div class="b-row flip reveal">
       <figure class="b-photo"><img src="images/basbousa-cheese.jpg" alt="المعجنات البوكس — صندوق معجنات" loading="lazy" decoding="async" style="object-position:center center"><span class="p-num">04</span></figure>
       <div class="b-info">
-        <div class="b-kicker"><span class="latin-label">Pastry Box No. 04</span></div>
         <h3>المعجنات البوكس</h3>
         <p class="b-desc">صناديق معجنات محشوّة، مخبوزة حتى الذهبيّة — للمذاق المالح الذي يكمل الحلو. ومتوفرة بمقاسين: بوكس صغير وبوكس كبير.</p>
         <div class="b-boxes">
@@ -886,10 +885,9 @@ body.locked{overflow:hidden}
     <div class="sig-grid">
       <figure class="sig-photo reveal">
         <img src="images/sig-real.jpg" alt="لقطة قريبة لمعمول قصة الحلى الحقيقي">
-        <figcaption>The Craft — Handmade</figcaption>
+        <figcaption>حِرفة يدوية</figcaption>
       </figure>
       <div class="sig-text reveal">
-        <span class="latin-label">Signature</span>
         <h2>تفاصيل تُصنع بعناية.</h2>
         <p>قالبٌ خشبي، عجينةٌ طرية، وبصمةٌ لا تشبه غيرها. كل قطعة تخرج من الفرن وهي تحمل حكايتها الخاصة.</p>
         <div class="sig-mark"><span class="diamond"></span><span>قصة الحلى</span></div>
@@ -901,7 +899,7 @@ body.locked{overflow:hidden}
     <div class="wrap story-grid">
       <figure class="story-photo reveal"><img src="images/story-real.jpg" alt="معمول رول حقيقي من إنتاج قصة الحلى"></figure>
       <div class="story-text reveal">
-        <span class="latin-label">Our Story — قصتنا</span>
+        <span class="ar-label">قصتنا</span>
         <h2>من الدقيق تبدأ الحكاية</h2>
         <p>من أول لمسة للدقيق، تبدأ رحلة المعمول حتى يصل إليك بطعمه الذي تعرفه وتحبه.</p>
         <div class="story-line"><i></i><b></b><i></i></div>
@@ -914,7 +912,7 @@ body.locked{overflow:hidden}
 <section class="page contact-page" id="page-contact">
   <div class="wrap">
     <div class="contact-card reveal">
-      <span class="latin-label">Contact — تواصل معنا</span>
+      <span class="ar-label">تواصل معنا</span>
       <h2 class="sec-title">نسعد بخدمتكم</h2>
       <p class="sec-sub">للطلبات والاستفسار، تواصل معنا مباشرة وسنكون سعداء بخدمتك.</p>
       <div class="contact-actions">
@@ -960,7 +958,7 @@ body.locked{overflow:hidden}
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <img class="f-logo" src="images/logo.png" alt="قصة الحلى — Sweet Story">
+        <img class="f-logo" src="images/logo.png" alt="قصة الحلى">
         <p class="f-tag">«من الدقيق تبدأ الحكاية.»</p>
         <p class="f-note">مخبز عربي تقليدي يقدّم المعمول والبسبوسة كما يجب أن تكون: بعناية، وبطعمٍ يبقى في الذاكرة.</p>
         <span class="f-social-label">تابعنا</span>
@@ -989,7 +987,7 @@ body.locked{overflow:hidden}
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="latin-label">From Flour, The Story Begins</span>
+      <span class="ar-label">من الدقيق تبدأ الحكاية</span>
     </div>
   </div>
 </footer>
@@ -1070,13 +1068,13 @@ body.locked{overflow:hidden}
   var tabs = document.querySelectorAll('.cat-switch button');
   var cards = document.querySelectorAll('#maamoulGrid .p-card');
   var countEl = document.querySelector('.cat-switch .count');
-  var names = { all:'08 PIECES', classic:'05 PIECES', mrabaat:'03 PIECES' };
+  var names = { all:'٠٨ قطع', classic:'٠٥ قطع', mrabaat:'٠٣ قطع' };
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){
       tabs.forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
       tab.classList.add('active'); tab.setAttribute('aria-selected','true');
       var showCat = tab.getAttribute('data-show');
-      if(countEl){ countEl.textContent = names[showCat] || '08 PIECES'; }
+      if(countEl){ countEl.textContent = names[showCat] || '٠٨ قطع'; }
       cards.forEach(function(card){
         var match = (showCat === 'all') || (card.getAttribute('data-cat') === showCat);
         if(match){
