@@ -244,7 +244,6 @@ button{font-family:inherit}
 
 /* pricing */
 .pricing{margin-top:var(--s10);border:var(--line);border-radius:3px;background:var(--soft-flour);padding:var(--s8);position:relative;overflow:hidden}
-.pricing::before{content:"60";position:absolute;bottom:-56px;inset-inline-end:-8px;font-family:var(--serif-ar);font-weight:700;font-size:220px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(165,139,103,.18);pointer-events:none;user-select:none}
 .pricing-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--s8);align-items:center;position:relative;z-index:1}
 .price-main{display:flex;align-items:flex-end;gap:var(--s2)}
 .price-main .num{font-family:var(--serif-ar);font-weight:700;font-size:clamp(72px,8vw,104px);line-height:1;color:var(--deep-dough)}
@@ -768,11 +767,11 @@ body.locked{overflow:hidden}
 
     <div class="p-grid" id="maamoulGrid">
       <article class="p-card reveal" data-cat="classic">
-        <div class="p-photo"><img src="images/maamoul-01-halib.jpg" alt="معمول بالحليب المحموس" loading="lazy" decoding="async"><span class="p-num">01</span><span class="p-tag">مختار بعناية</span></div>
+        <div class="p-photo"><img src="images/maamoul-01-halib.jpg" alt="معمول بالحليب المحموس" loading="lazy" decoding="async"><span class="p-num">01</span></div>
         <div class="p-body"><h3 class="p-name">معمول بالحليب المحموس</h3></div>
       </article>
       <article class="p-card reveal" data-cat="classic">
-        <div class="p-photo"><img src="images/maamoul-02-qashta.jpg" alt="معمول بالقشطة والتمر" loading="lazy" decoding="async"><span class="p-num">02</span><span class="p-tag">طازج</span></div>
+        <div class="p-photo"><img src="images/maamoul-02-qashta.jpg" alt="معمول بالقشطة والتمر" loading="lazy" decoding="async"><span class="p-num">02</span></div>
         <div class="p-body"><h3 class="p-name">معمول بالقشطة والتمر</h3></div>
       </article>
       <article class="p-card reveal" data-cat="classic">
@@ -784,7 +783,7 @@ body.locked{overflow:hidden}
         <div class="p-body"><h3 class="p-name">معمول أبيض رول</h3></div>
       </article>
       <article class="p-card reveal" data-cat="classic">
-        <div class="p-photo"><img src="images/maamoul-05-burr-roll.jpg" alt="معمول بر رول" loading="lazy" decoding="async"><span class="p-num">05</span><span class="p-tag">مختار بعناية</span></div>
+        <div class="p-photo"><img src="images/maamoul-05-burr-roll.jpg" alt="معمول بر رول" loading="lazy" decoding="async"><span class="p-num">05</span></div>
         <div class="p-body"><h3 class="p-name">معمول بر رول</h3></div>
       </article>
       <article class="p-card reveal" data-cat="mrabaat">
@@ -792,7 +791,7 @@ body.locked{overflow:hidden}
         <div class="p-body"><h3 class="p-name">معمول مربعات الزعتر</h3></div>
       </article>
       <article class="p-card reveal" data-cat="mrabaat">
-        <div class="p-photo"><img src="images/maamoul-07-simsim.jpg" alt="معمول مربعات السمسم" loading="lazy" decoding="async"><span class="p-num">07</span><span class="p-tag">طازج</span></div>
+        <div class="p-photo"><img src="images/maamoul-07-simsim.jpg" alt="معمول مربعات السمسم" loading="lazy" decoding="async"><span class="p-num">07</span></div>
         <div class="p-body"><h3 class="p-name">معمول مربعات السمسم</h3></div>
       </article>
       <article class="p-card reveal" data-cat="mrabaat">
@@ -805,11 +804,7 @@ body.locked{overflow:hidden}
       <div class="pricing-grid">
         <div>
           <span class="latin-label">Box Sizes</span>
-          <div class="price-main" style="margin-top:16px">
-            <span class="num">60</span>
-            <span class="unit"><b>ريال</b><span>للبوكس الكبير</span></span>
-          </div>
-          <p class="price-note">اختر البوكس الذي يناسبك — من بوكس صغير إلى بوكس كبير، معمول ومعبّأ وجاهز للتقديم.</p>
+          <p class="price-note" style="margin-top:12px">اختر البوكس الذي يناسبك — من بوكس صغير إلى بوكس كبير، معمول ومعبّأ وجاهز للتقديم.</p>
         </div>
         <ul class="qty-list">
           <li><span class="q-name">بوكس صغير</span><span class="leader"></span><span class="q-price"><b>16</b><span>ريال</span></span></li>
@@ -845,8 +840,7 @@ body.locked{overflow:hidden}
         <div class="b-kicker"><span class="latin-label">Basbousa No. 01</span></div>
         <h3>بسبوسة الحليب المحموس</h3>
         <p class="b-desc">قوامٌ ذهبي مشرّب بالقطر، بعمق الحليب المحموس الذي يمنحها طابعها الخاص.</p>
-        <span class="b-tag">مختار بعناية</span>
-        <div class="b-price"><b>60 ر.س</b><span>للقالب</span></div>
+        <div class="b-price"><b>60 ر.س</b></div>
       </div>
     </div>
 
@@ -856,8 +850,7 @@ body.locked{overflow:hidden}
         <div class="b-kicker"><span class="latin-label">Basbousa No. 02</span></div>
         <h3>بسبوسة بالقشطة</h3>
         <p class="b-desc">طبقة قشطة ناعمة فوق سميدٍ طري، لقاءٌ بسيط بين القوامين.</p>
-        <span class="b-tag">طازج</span>
-        <div class="b-price"><b>60 ر.س</b><span>للقالب</span></div>
+        <div class="b-price"><b>40 ر.س</b></div>
       </div>
     </div>
 
@@ -867,8 +860,7 @@ body.locked{overflow:hidden}
         <div class="b-kicker"><span class="latin-label">Basbousa No. 03</span></div>
         <h3>خلية النحل</h3>
         <p class="b-desc">بسبوسة على هيئة خلية النحل، مرشّعة بالعسل، بقوامٍ سميديٍ ناعم ينساب في الفم.</p>
-        <span class="b-tag">جديد</span>
-        <div class="b-price"><b>25 ر.س</b><span>للقالب</span></div>
+        <div class="b-price"><b>25 ر.س</b></div>
       </div>
     </div>
 
@@ -878,7 +870,6 @@ body.locked{overflow:hidden}
         <div class="b-kicker"><span class="latin-label">Pastry Box No. 04</span></div>
         <h3>المعجنات البوكس</h3>
         <p class="b-desc">صناديق معجنات محشوّة، مخبوزة حتى الذهبيّة — للمذاق المالح الذي يكمل الحلو. ومتوفرة بمقاسين: بوكس صغير وبوكس كبير.</p>
-        <span class="b-tag">جديد</span>
         <div class="b-boxes">
           <div class="b-box-line"><span class="q-name">بوكس كبير</span><span class="leader"></span><span class="q-price"><b>60</b><span>ريال</span></span></div>
           <div class="b-box-line"><span class="q-name">بوكس صغير</span><span class="leader"></span><span class="q-price"><b>30</b><span>ريال</span></span></div>
@@ -886,10 +877,7 @@ body.locked{overflow:hidden}
       </div>
     </div>
 
-    <div class="b-pricing reveal">
-      <span class="bp-label">تُباع البسبوسة بالقالب والمعجنات بالبوكس — جاهزة ومغلّفة</span>
-      <div class="bp-price"><b>60</b><span>ريال / القالب</span></div>
-    </div>
+
   </div>
 </section>
 
