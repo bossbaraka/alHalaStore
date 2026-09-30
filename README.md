@@ -59,7 +59,21 @@ python3 scripts/upload_server.py --port 8001
 مكانها من القائمة، واضغط **رفع واستبدال**. الصورة تُحفظ في `images/`، والأصل
 يبقى في `uploads/`، وتُعاد قائمة `sweet-story-menu.html` تلقائياً.
 
-### 2) الماسح التلقائي (للصور التي تصل بأي مجلد)
+### 2) GitHub — القناة الموثوقة (موصى بها)
+
+رفع المرفقات من المح DISCUSSION لا يصل، وروابط Cloud محجوبة، والمستودع هو
+القناة الوحيدة التي تصل. من جوالك:
+
+1. افتح `https://github.com/bossbaraka/alHalaStore/upload/main`
+2. `choose files` ← اختر الصورة ← اكتب اسماً مثل `basbousa-qashta` ← Commit
+3. اكتب لي «تم» ← أشغّل:
+
+```bash
+python3 scripts/sync_inbox.py            # يسحب الصور الجديدة ويطبّقها ويبني القائمة
+python3 scripts/sync_inbox.py --list     # عرض ما ينتظر فقط
+```
+
+### 3) الماسح التلقائي (للصور التي تصل بأي مجلد)
 
 ```bash
 python3 scripts/import_attachments.py --list              # عرض ما تم العثور عليه
