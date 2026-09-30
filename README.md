@@ -61,7 +61,7 @@ python3 scripts/upload_server.py --port 8001
 
 ### 2) GitHub — القناة الموثوقة (موصى بها)
 
-رفع المرفقات من المح DISCUSSION لا يصل، وروابط Cloud محجوبة، والمستودع هو
+رفع المرفقات من المحادثة لا يصل، وروابط Cloud محجوبة، والمستودع هو
 القناة الوحيدة التي تصل. من جوالك:
 
 1. افتح `https://github.com/bossbaraka/alHalaStore/upload/main`
